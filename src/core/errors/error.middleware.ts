@@ -10,7 +10,11 @@ export function errorMiddleware(err: any, req: Request, res: Response, next: Nex
     }
 
     if (err instanceof ZodError) {
-        return res.status(400).json({ error: err.issues });
+        return res.status(400).json({
+            error: "Validation error",
+            issues: err.issues,
+        });
     }
-    
+
+    return res.status(500).json({ error: "Internal server error" });
 }

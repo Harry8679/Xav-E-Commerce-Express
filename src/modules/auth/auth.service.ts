@@ -20,3 +20,5 @@ export class AuthService {
         return { id: user._id, email: user.email };
     }
 }
+
+export const authService = new AuthService();

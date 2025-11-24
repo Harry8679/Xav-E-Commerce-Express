@@ -11,7 +11,9 @@ async function start() {
         await mongoose.connect(process.env.MONGO_URI as string);
         console.log("MONGO DB Connected !");
 
-        app.listen(`Server is running on the port ${PORT}`);
+        app.listen(PORT, () => {
+            console.log(`Server is running on the port ${PORT}`);
+        });
     } catch(error) {
         console.error("Error connecting to server:", error);
     }

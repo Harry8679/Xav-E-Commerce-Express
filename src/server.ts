@@ -16,3 +16,5 @@ async function start() {
         console.error("Error connecting to server:", error);
     }
 }
+
+start();

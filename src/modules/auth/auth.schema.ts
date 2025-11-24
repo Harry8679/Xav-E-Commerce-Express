@@ -8,3 +8,15 @@ export const registerSchema = z.object({
 });
 
 export type RegisterInput = z.infer<typeof registerSchema>;
+
+/*
+Cette ligne :
+export type RegisterInput = z.infer<typeof registerSchema>;
+dit a Zod fais moi automatiquement :
+type RegisterInput = {
+  firstName: string;
+  lastName: string;
+  email: string;
+  password: string;
+}
+*/

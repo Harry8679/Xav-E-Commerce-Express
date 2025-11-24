@@ -19,4 +19,6 @@ type RegisterInput = {
   email: string;
   password: string;
 }
+
+Ca permet le jour où on changera le Schema de données il le fera automatiquement
 */

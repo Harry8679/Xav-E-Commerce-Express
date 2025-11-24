@@ -21,4 +21,7 @@ type RegisterInput = {
 }
 
 Ca permet le jour où on changera le Schema de données il le fera automatiquement
+
+typeof registerSchema : Ce n’est pas une valeur mais le type du schéma. “Prends le type du schéma de validation”
+z.infer<...> : C’est une fonction TypeScript qui génère un type basé sur le schéma.
 */

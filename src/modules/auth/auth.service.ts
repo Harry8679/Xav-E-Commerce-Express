@@ -24,7 +24,7 @@ export class AuthService {
         const user = User.findOne({ email: dto.email });
         if (!user) throw new AppError("Invalid Credentials", 400);
 
-        const passwordValid = await argon2.verify(user.pas)
+        const passwordValid = await argon2.verify()
     }
 }
 

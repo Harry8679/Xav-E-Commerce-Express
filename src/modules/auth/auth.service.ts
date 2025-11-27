@@ -25,6 +25,9 @@ export class AuthService {
         if (!user) throw new AppError("Invalid Credentials", 400);
 
         const passwordValid = await argon2.verify(user.password, dto.password);
+        if (!passwordValid) throw new AppError("Invalid Credentials", 400);
+
+        const accessToken = jwt
     }
 }
 

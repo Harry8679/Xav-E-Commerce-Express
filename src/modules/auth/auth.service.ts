@@ -40,8 +40,8 @@ export class AuthService {
             accessToken,
             refreshToken,
         };
-  }
     }
 }
+
 
 export const authService = new AuthService();

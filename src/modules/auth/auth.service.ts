@@ -1,6 +1,6 @@
 import { AppError } from "../../core/errors/AppError";
 import { User } from "./auth.model";
-import { RegisterInput } from "./auth.schema";
+import { LoginInput, RegisterInput } from "./auth.schema";
 import argon2 from "argon2";
 
 export class AuthService {
@@ -18,6 +18,10 @@ export class AuthService {
         });
 
         return { id: user._id, email: user.email };
+    }
+
+    async login(dto: LoginInput) {
+
     }
 }
 

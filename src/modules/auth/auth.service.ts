@@ -1,7 +1,9 @@
+import jwt from "jsonwebtoken";
 import { AppError } from "../../core/errors/AppError";
 import { User } from "./auth.model";
 import { LoginInput, RegisterInput } from "./auth.schema";
 import argon2 from "argon2";
+
 
 export class AuthService {
     async register(dto: RegisterInput) {

@@ -25,7 +25,14 @@ export class AuthController {
                 sameSite: "strict",
                 maxAge: 7 * 24 * 60 * 60 * 1000,
             });
-        } catch(err) {}
+
+            return res.json({
+                user: result.user,
+                accessToken: result.accessToken
+            });
+        } catch(err) {
+            next(err);
+        }
     }
 };
 

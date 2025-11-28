@@ -13,6 +13,8 @@ export class AuthController {
             next(err);
         }
     }
+
+    async login(req: Request, res: Response, next: NextFunction) {}
 };
 
 export const authController = new AuthController();
